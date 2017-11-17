@@ -1,0 +1,20 @@
+{
+  "name": "pwa-blog-app",
+  "homepage": "https://github.com/arizkyana/pwa-sharing-swa",
+  "description": "Optimize with PWA, Bootstrap 3",
+  "main": "index.html",
+  "authors": [
+    "agung.rizkyana@swamedia.co.id"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
