@@ -2,218 +2,223 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Blog App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
 
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 
 
 </head>
 
 <body>
 
-  <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-          aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Brand</a>
-      </div>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Weather</a>
+        </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active">
-            <a href="#">Link
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Action</a>
-              </li>
-              <li>
-                <a href="#">Another action</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#">One more separated link</a>
-              </li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Link
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Link</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Action</a>
+                        </li>
+                        <li>
+                            <a href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a href="#">Something else here</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <a href="#">Separated link</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <a href="#">One more separated link</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-        <form class="navbar-form navbar-left">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Action</a>
-              </li>
-              <li>
-                <a href="#">Another action</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">Link</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Action</a>
+                        </li>
+                        <li>
+                            <a href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a href="#">Something else here</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <a href="#">Separated link</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
-  </nav>
+</nav>
 
-  <div class="container">
-    <div class="center-block">
-      <div class="page-header">
-        <h1>Example page header
-          <small>Subtext for header</small>
-        </h1>
-      </div>
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
+<div class="container">
+    <div class="center-blok">
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img data-src="images/6.jpg" src="images/6.jpg" alt="sea-rocks">
-            <div class="carousel-caption">
-              Sea Rocks
+        <form action="" id="filter-kota" name="filter-kota">
+            <div class="form-group">
+                <label for="kota">City</label>
+                <select name="kota" id="kota" class="form-control">
+                    <option value="">Choose City</option>
+                    <option value="Bandung">Bandung</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Jogja">Jogja</option>
+                </select>
             </div>
-          </div>
-          <div class="item">
-            <img data-src="images/11.jpg" src="images/11.jpg" alt="light-and-house">
-            <div class="carousel-caption">
-              Light and House
-            </div>
-          </div>
-          <div class="item">
-            <img data-src="images/12.jpg" src="images/12.jpg" alt="mount-bromo">
-            <div class="carousel-caption">
-              Mount Bromo
-            </div>
-          </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-      <div class="text-justify">
-        <h2>Sub title</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe harum doloribus blanditiis ad in quod facilis temporibus commodi
-          aspernatur odio necessitatibus ab, aut voluptatum architecto nobis ducimus, officia praesentium vero.
-        </p>
-      </div>
-
-      <div id="comment-box">
-        <form>
-          <div class="form-group">
-
-            <label for="comment">Leave a comment</label>
-            <textarea class="form-control" name="comment" id="comment" cols="30" rows="8"></textarea>
-
-          </div>
-          <button type="submit" class="btn btn-lg btn-block btn-primary">
-            Submit
-          </button>
         </form>
-      </div>
 
-      <div id="latest-comment">
-        <h3>Latest Comments
-          <i class="glyphicon glyphicon-comments"></i>
-        </h3>
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <img class="media-object img-circle" data-src="images/a4.jpg" src="images/a4.jpg" alt="user-comment">
-            </a>
-          </div>
-          <div class="media-body">
-            
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ad corrupti similique aliquam voluptatem provident ex tenetur ipsam dolores quod, dolore numquam recusandae iusto. Temporibus similique quas eum rerum! Ipsum.
-          </div>
+        <div class="page-header" id="city-region">
+
         </div>
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <img class="media-object img-circle" data-src="images/a4.jpg" src="images/a4.jpg" alt="user-comment">
-            </a>
-          </div>
-          <div class="media-body">
-            
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ad corrupti similique aliquam voluptatem provident ex tenetur ipsam dolores quod, dolore numquam recusandae iusto. Temporibus similique quas eum rerum! Ipsum.
-          </div>
+
+        <!--current-->
+        <div id="current">
+            <h2>Current
+                <small>tes</small>
+            </h2>
         </div>
+
         <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <img class="media-object img-circle" data-src="images/a4.jpg" src="images/a4.jpg" alt="user-comment">
-            </a>
-          </div>
-          <div class="media-body">
-            
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ad corrupti similique aliquam voluptatem provident ex tenetur ipsam dolores quod, dolore numquam recusandae iusto. Temporibus similique quas eum rerum! Ipsum.
-          </div>
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" id="current-icon" data-src="current.jpg" alt="current-icon">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Feels Like</h4>
+                <div id="current-feels-like">
+
+                </div>
+
+            </div>
         </div>
-      </div>
+
+        <div class="media">
+            <div class="media-left">
+                <strong>Wind</strong>
+            </div>
+            <div class="media-body text-right">
+                <div id="current-wind"></div>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <strong>Pressure</strong>
+            </div>
+            <div class="media-body text-right">
+                <div id="current-pressure"></div>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <strong>Precip</strong>
+            </div>
+            <div class="media-body text-right">
+                <div id="current-precip"></div>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <strong>Humidity</strong>
+            </div>
+            <div class="media-body text-right">
+                <div id="current-humidity"></div>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <strong>Cloud</strong>
+            </div>
+            <div class="media-body text-right">
+                <div id="current-cloud"></div>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <strong>Visiblity</strong>
+            </div>
+            <div class="media-body text-right">
+                <div id="current-visibility"></div>
+            </div>
+        </div>
+
+        <!--/current-->
+
+        <!--today-->
+        <div id="today">
+
+        </div>
+        <div id="hours">
+
+        </div>
+        <!--/today-->
     </div>
-  </div>
+</div>
 
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="bower_components/moment/min/moment.min.js"></script>
+
+<script src="service-worker.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>
