@@ -8,14 +8,14 @@
     <title>Weather App</title>
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
 
 
 </head>
 
-<body>
+<body style="padding-top: 60px;">
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -45,6 +45,9 @@
                     <option value="Bandung">Bandung</option>
                     <option value="Jakarta">Jakarta</option>
                     <option value="Yogyakarta">Yogyakarta</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="Paris">Paris</option>
+                    <option value="London">London</option>
                 </select>
             </div>
 
@@ -150,6 +153,32 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <script src="bower_components/moment/min/moment.min.js"></script>
+
+<script type="text/javascript">
+    /*
+     * Check Browser Compatible with Service Worker
+     */
+
+    function registerServiceWorker() {
+        if (!('serviceWorker' in navigator)) {
+            console.log('Service worker not supported');
+
+            return;
+
+        } else {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function () {
+                    console.log('Service Worker Registered');
+                })
+                .catch(function (error) {
+                    console.error(error);
+                })
+        }
+
+    }
+
+    registerServiceWorker();
+</script>
 
 <script src="service-worker.js"></script>
 <script src="js/app.js"></script>

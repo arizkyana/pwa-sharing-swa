@@ -5,6 +5,7 @@ var app = (function () {
         if (!city) city = 'Bandung';
 
         showLoading();
+        resetHours();
         fetch(url + city)
             .then(validateResponse)
             .then(responseToJson)
@@ -14,7 +15,6 @@ var app = (function () {
 
     // core
     function compose(response) {
-        console.log("need to compose", response);
 
         // city region
         $("#city-region").html(
@@ -55,6 +55,7 @@ var app = (function () {
 
         // current
 
+
         $.each(response.forecast.forecastday, function (i, o) {
 
             $("#today").html(
@@ -67,6 +68,7 @@ var app = (function () {
                 '<div class="col-xs-3 text-center"><strong>Moonset</strong><br />' + o.astro.moonset + '</div>' +
                 '</div>'
             );
+
 
             $.each(o.hour, function (idx, hour) {
                 $('#hours').append(
@@ -102,6 +104,10 @@ var app = (function () {
         throw response.getText();
     }
 
+    function resetHours(){
+        $("#hours").empty();
+    }
+
     function logError(err) {
         console.error(err);
     }
@@ -109,6 +115,7 @@ var app = (function () {
     function init() {
         hideLoading();
         loadInitForecast();
+
     }
 
     // Public Functions
@@ -124,6 +131,7 @@ var app = (function () {
     function hideLoading(){
         $("#loading").hide();
     }
+
 
     return {
         init: (init),
