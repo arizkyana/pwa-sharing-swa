@@ -1,7 +1,11 @@
+var url = 'http://api.apixu.com/v1/forecast.json?key=aa0411a6859c485780c04248170801&q=';
 var app = (function () {
 
-    function loadInitForecast() {
-        fetch('forecast.json')
+    function loadInitForecast(city) {
+        if (!city) city = 'Bandung';
+
+        showLoading();
+        fetch(url + city)
             .then(validateResponse)
             .then(responseToJson)
             .then(compose)
@@ -50,25 +54,40 @@ var app = (function () {
         );
 
         // current
+
         $.each(response.forecast.forecastday, function (i, o) {
-            console.log(o);
+
             $("#today").html(
                 '<h2>Today <small>' + o.day.condition.text + '</small></h2>' +
                 '<span class=>' + moment(o.date).format('dddd, DD MMM YYYY') + '</span> <br />' +
                 '<div class="row">' +
-                '<div class="col-xs-3 text-center"><strong>Sunrise</strong><br />'+o.astro.sunrise+'</div>' +
-                '<div class="col-xs-3 text-center"><strong>Sunset</strong><br />'+o.astro.sunset+'</div>' +
-                '<div class="col-xs-3 text-center"><strong>Moonrise</strong><br />'+o.astro.moonrise+'</div>' +
-                '<div class="col-xs-3 text-center"><strong>Moonset</strong><br />'+o.astro.moonset+'</div>' +
+                '<div class="col-xs-3 text-center"><strong>Sunrise</strong><br />' + o.astro.sunrise + '</div>' +
+                '<div class="col-xs-3 text-center"><strong>Sunset</strong><br />' + o.astro.sunset + '</div>' +
+                '<div class="col-xs-3 text-center"><strong>Moonrise</strong><br />' + o.astro.moonrise + '</div>' +
+                '<div class="col-xs-3 text-center"><strong>Moonset</strong><br />' + o.astro.moonset + '</div>' +
                 '</div>'
             );
 
-            $("#hours").html(
-              '<div class="media">' +
-              '</div>'
-            );
+            $.each(o.hour, function (idx, hour) {
+                $('#hours').append(
+                    '<div class="media">' +
+                    '<div class="media-left">' +
+                    '<a href="">' +
+                    '<img data-src="' + hour.condition.icon + '" src="' + hour.condition.icon + '" alt="" />' +
+                    '</a>' +
+                    '</div>' +
+                    '<div class="media-body">' +
+                    '<span class="pull-right" style="line-height: 3"><small>' + moment(hour.time).format('HH:mm a') + '</small></span>' +
+                    '<h4>' + hour.condition.text + '</h4>' +
+                    '<p> Chance of rain : ' + hour.chance_of_rain + ' %</p>' +
+                    '</div>' +
+                    '</div>'
+                );
+            });
 
         });
+
+        hideLoading();
 
 
     }
@@ -88,15 +107,34 @@ var app = (function () {
     }
 
     function init() {
+        hideLoading();
         loadInitForecast();
     }
 
+    // Public Functions
+    function changeCity(){
+        var city = $(this).val();
+        loadInitForecast(city);
+    }
+
+    function showLoading(){
+        $("#loading").show();
+    }
+
+    function hideLoading(){
+        $("#loading").hide();
+    }
+
     return {
-        init: (init)
+        init: (init),
+        changeCity: changeCity
     };
 
 })();
 
 $(document).ready(function () {
+
     app.init();
+
+    $("#city").change(app.changeCity);
 });
